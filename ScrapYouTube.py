@@ -15,8 +15,6 @@ while True:
     time.sleep(2)
     videos = driver.find_elements(By.CLASS_NAME, 'style-scope ytd-rich-item-renderer')
     video_list = []
-    print(type(videos))
-    print(len(videos))
     for video in videos:
             title = video.find_element(By.XPATH, './/*[@id="video-title"]').text
             views = video.find_element(By.XPATH, './/*[@id="metadata-line"]/span[1]').text
